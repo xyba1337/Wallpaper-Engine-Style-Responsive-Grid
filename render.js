@@ -1,4 +1,4 @@
-//I forked and modified this codepen for some random titles: https://codepen.io/chiragbhansali/pen/EWppvy
+//I forked and modified this codepen for some random image captions: https://codepen.io/chiragbhansali/pen/EWppvy
 var verbs, nouns, adjectives, adverbs, preposition;
 nouns = ["bird", "clock", "boy", "plastic", "duck", "teacher", "old lady", "professor", "hamster", "dog"];
 verbs = ["kicked", "ran", "flew", "dodged", "sliced", "rolled", "died", "breathed", "slept", "killed"];
@@ -23,7 +23,7 @@ function sentence() {
 }
 
 
-//Here we load in some randomly generated images into all the images div blocks
+//Here we load in some randomly generated images into all the image div blocks
 let images = document.getElementsByClassName("image");
 
 for (let image of images) {
