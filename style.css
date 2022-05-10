@@ -31,14 +31,6 @@ body {
     transform: scale(1.3),;
 }
 
-.img {
-    transition: border 0.2s;
-}
-
-.img:hover {
-    transform: scale(1.2);
-}
-
 .centerinfo {
     float: none;
     margin-left: auto;
