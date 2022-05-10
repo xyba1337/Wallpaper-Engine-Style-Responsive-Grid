@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Grid With Smooth Cards.</title>
+</head>
+
+<body>
+    <div class="container mt-5 ">
+        <div class="text-center w-50  mt-5 mb-5 centerinfo">
+            <h1>Wallpaper Engine Grid</h1>
+            <p class="text-muted">This grid utilizes the bootstrap 4 framework in order to create a responsive grid with
+                square images.
+                The image class style, transitions and captions are custom made by me and inspired by the wallpaper engine browsing menu.
+            </p>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+            <div class="image">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container mt-5 mb-5 ">
+            <div class="row">
+                <div class="col text-center">
+                    <p>Technologies used: <a href="https://getbootstrap.com/">Bootstrap 4</a></p>
+                    <p>Api used: <a href="https://picsum.photos/">Picsum</a></p>
+                </div>
+                <div class="col text-center">
+                    <p>© 2022 Made By <a href="https://github.com/xyba1337">xyba</a></p>
+                    <p>You can feel free to use this for both commercial and free use, <br>just leave some credits.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        //I forked and modified this codepen for some random titles: https://codepen.io/chiragbhansali/pen/EWppvy
+        var verbs, nouns, adjectives, adverbs, preposition;
+        nouns = ["bird", "clock", "boy", "plastic", "duck", "teacher", "old lady", "professor", "hamster", "dog"];
+        verbs = ["kicked", "ran", "flew", "dodged", "sliced", "rolled", "died", "breathed", "slept", "killed"];
+        adjectives = ["beautiful", "lazy", "professional", "lovely", "dumb", "rough", "soft", "hot", "vibrating", "slimy"];
+        adverbs = ["slowly", "elegantly", "precisely", "quickly", "sadly", "humbly", "proudly", "shockingly", "calmly", "passionately"];
+        preposition = ["down", "into", "up", "on", "upon", "below", "above", "through", "across", "towards"];
+
+        function randGen() {
+            return Math.floor(Math.random() * 5);
+        }
+
+        function sentence() {
+            var rand1 = Math.floor(Math.random() * 5);
+            var rand2 = Math.floor(Math.random() * 5);
+            var rand3 = Math.floor(Math.random() * 5);
+            var rand4 = Math.floor(Math.random() * 5);
+            var rand5 = Math.floor(Math.random() * 5);
+            var rand6 = Math.floor(Math.random() * 5);
+            var content = "The " + adjectives[rand1] + " " + " " + adverbs[rand3] + " " + verbs[rand4] + ".";
+
+            return content;
+        }
+
+
+        //Here we load in some randomly generated images into all the images div blocks
+        let images = document.getElementsByClassName("image");
+
+        for (let image of images) {
+            //loading in images start
+            const imgEl = document.createElement('img');
+            imgEl.className = "img";
+            imgEl.src = "https://picsum.photos/200?random=" + Math.floor(Math.random() * 100);;
+            image.appendChild(imgEl);
+            //loading in images end
+
+            //adding the captions start
+            const desc = document.createElement('div');
+            desc.className = "desc";
+
+            const desc_title = document.createElement('p');
+            desc_title.className = "desc_content";
+            var text = document.createTextNode(sentence());
+            desc_title.appendChild(text);
+
+            desc.appendChild(desc_title);
+
+            image.appendChild(desc);
+            //adding the captions end
+        }
+
+    </script>
+</body>
+
+</html>
