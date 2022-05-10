@@ -11,7 +11,7 @@ body {
 }
 
 .image {
-    border: 1.9px solid transparent;/* This transparency trick will allow us to transition the border without any annoying movement */
+    border: 1.9px solid transparent;/* This transparency trick will allow us to transition the border without any annoying movements btw. */
     transition: border 0.2s;
     position: relative;
     overflow: hidden;
